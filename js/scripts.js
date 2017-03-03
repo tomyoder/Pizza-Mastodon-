@@ -1,32 +1,40 @@
 //BACKEND
- function Pizza (size, [topping]){
+ function pizza(size,[topping]){
    this.pizzaSize = size;
    this.pizzaTopping = topping;
    this.pizzaCost = 7;
  }
 
-
-
- Pizza.prototype.cost = function(inputSize) {
-   if (inputSize === "large") {
+ pizza.prototype.price = function(size) {
+   if (size === "large") {
      return this.pizzaCost * 2;
-     console.log(inputSize);
+        console.log(size);
    }
-     else if (inputSize === "medium") {
-       return this.cost * 1.5;
+     else if (size === "medium") {
+       return this.pizzaCost * 1.5;
      }
-       else if (inputSize === "small") {
-         return this.cost * 1;
+       else if (size === "small") {
+         return this.pizzaCost * 1;
        }
+  meat.foreach(function(meat) {
+    return this.pizzaCost + 2;
+  })
+  vegetable.foreach(function(vegetable) {
+    return this.pizzaCost + 2;
+  })
+  accent.foreach(function(accent){
+    return this.pizzaCost + 2;
+  })
 
  };
 
 //FRONTEND
  $(document).ready(function(){
+
    $("#form1").submit(function(event){
      event.preventDefault();
-     var inputSize = $("input:radio[name=size]:checked").val();
-     console.log(inputSize);
+     var size = $("input:radio[name=size]:checked").val();
+     console.log(size);
 
      $("input:checkbox[name=meat]:checked").each(function(){
        var meat = $(this).val();
