@@ -7,10 +7,9 @@
 
  pizza.prototype.price = function(size) {
    if (size === "large") {
-     return this.pizzaCost * 2;
         console.log(size);
    }
-     else if (size === "medium") {
+    else if (size === "medium") {
        return this.pizzaCost * 1.5;
      }
        else if (size === "small") {
@@ -49,6 +48,7 @@
        var accent = $(this).val();
 
      });
+     $("#price").text("Your Pizza will be " + priceResult + " dollars");
 
    })
  });
