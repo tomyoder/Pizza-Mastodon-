@@ -1,13 +1,16 @@
 //BACKEND
- function pizza(size,[topping]){
+ function pizza(size, meat, veg, accent){
    this.pizzaSize = size;
-   this.pizzaTopping = topping;
+   this.meatChoice = meat;
+   this.vegChoice = veg;
+   this.accentChoice = accent;
    this.pizzaCost = 7;
  }
 
  pizza.prototype.price = function(size) {
-   if (size === "large") {
-        console.log(size);
+   if (this.pizzaSize === "large") {
+     return this.pizzaCost * 2
+        console.log(this.pizzaSize);
    }
     else if (size === "medium") {
        return this.pizzaCost * 1.5;
@@ -15,15 +18,17 @@
        else if (size === "small") {
          return this.pizzaCost * 1;
        }
-  meat.foreach(function(meat) {
-    return this.pizzaCost + 2;
+
+  for (i=0; i<meatChoice.length; i++) {
+         this.pizzaCost + 2;
   })
-  vegetable.foreach(function(vegetable) {
-    return this.pizzaCost + 2;
+  for (i=0; i<vegChoice.length; i++) {
+         this.pizzaCost + 2;
   })
-  accent.foreach(function(accent){
-    return this.pizzaCost + 2;
+  for (i=0; i<accentChoice.length; i++){
+         this.pizzaCost + 2;
   })
+  return this.pizzaCost;
 
  };
 
@@ -37,18 +42,23 @@
 
      $("input:checkbox[name=meat]:checked").each(function(){
        var meat = $(this).val();
+       meatchoice.push(meat);
      });
 
      $("input:checkbox[name=vegetable]:checked").each(function(){
        var vegetable = $(this).val();
+       vegchoice.push(veg);
 
      });
 
      $("input:checkbox[name=accent]:checked").each(function(){
        var accent = $(this).val();
+       accentchoice.push(accent)
 
      });
-     $("#price").text("Your Pizza will be " + priceResult + " dollars");
+     var pizzaChoice = new Pizza(size, meatChoice, vegChoice, accentChoice);
+     var pizzaPrice = user.pizza.price;
+     //$("#price").text("Your Pizza will be " + priceResult + " dollars");
 
    })
  });
