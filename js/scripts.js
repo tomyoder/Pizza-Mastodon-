@@ -41,28 +41,29 @@ Pizza.prototype.price = function(size) {
      var size = $("input:radio[name=size]:checked").val();
      console.log(size);
 
-     $("input:checkbox[name=meatChoice]:checked").each(function(){
-       var meatChoice = $(this).val();
+     $("input:checkbox[name=meat]:checked").each(function(){
+       var inputMeat = $(this).val();
        var meat = [];
        meat.push(meatChoice);
        console.log(meat);
      });
 
-     $("input:checkbox[name=vegetable]:checked").each(function(){
-       var vegetable = $(this).val();
+     $("input:checkbox[name=veg]:checked").each(function(){
+       var inputVeg = $(this).val();
+       var veg = [];
        vegchoice.push(veg);
 
      });
 
      $("input:checkbox[name=accent]:checked").each(function(){
-       var accent = $(this).val();
-       accentchoice.push(accent)
-
+       var inputAccent = $(this).val();
+       var accent = [];
+       accentchoice.push(accent);
      });
 
      var pizzaChoice = new Pizza(size, meat, veg, accent);
      var pizzaPrice = user.pizza.price;
      //$("#price").text("Your Pizza will be " + priceResult + " dollars");
 
-   })
+   });
  });
