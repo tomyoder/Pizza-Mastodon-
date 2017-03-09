@@ -10,64 +10,60 @@
   </head>
   <body>
     <div class="jumbotron">
-     <div class="container">
-       <h1>Pizza Mastodon</h1>
-       <h2>Serving Centertown since the late Pleistocene</h2>
-     </div>
-   </div>
-   <div class="container">
-     <p>Welcome to Pizza Mastodon, where you can order a pizza and have it delivered to you anytime of the day or night.</p>
-   </div>
-   <div>
-     <p>Our system is very simple. Choose the size of the pizza you desire, and select from available toppings. We'll tell you what your pizza will cost, and deliver it in 40 min or less within Centertown.</p>
-   </div>
-   <form id="form1">
-     <div class="radio">
-       <h2>What size of pizza do you want?</h2>
-        <label>
-          <input type="radio" name="size" value="small">Small (11")
-        </label>
-     </div>
-     <div class="radio">
-       <label>
-         <input type="radio" name="size" value="medium">Medium (13")
-       </label>
-     </div>
-     <div class="radio">
-       <label>
-         <input type="radio" name="size" value="large">Large (17")
-       </label>
-     </div>
-     <div class="toppings">
-       <h2>Which of these toppings would you like?</h2>
-       <h3>Meats ($2 each)</h3>
-        <input type="checkbox" name="meat" value="Pepperoni">Pepperoni<br>
-        <input type="checkbox" name="meat" value="sausage">Sausage<br>
-        <input type="checkbox" name="meat" value="canadian-bacon">Canadian Bacon<br>
-        <input type="checkbox" name="meat" value="Prosciutto">prosciutto<br>
+      <div class="container">
+        <h1>Pizza Mastodon</h1>
+        <h2>Serving Centertown since the late Pleistocene</h2>
+      </div>
+    </div>
+    <div class="container">
+      <p>Welcome to Pizza Mastodon, where you can order a pizza and have it delivered to you anytime of the day or night.</p>
+    </div>
+    <div>
+      <p>Our system is very simple. Choose the size of the pizza you desire, and select from available toppings. We'll tell you what your pizza will cost, and deliver it in 40 min or less within Centertown.</p>
+    </div>
+    <div class="container">
+      <form id="form1">
+        <div class="radio">
+          <h2>What size of pizza do you want?</h2>
+          <label>
+            <input type="radio" name="size" value="small">Small (11")
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="medium">Medium (13")
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="large">Large (17")
+          </label>
+        </div>
+        <div class="toppings">
+          <h2>Which of these toppings would you like?</h2>
+          <h3>Meats ($2 each)</h3>
+            <input type="checkbox" name="meatChoice" value="Pepperoni">Pepperoni<br>
+            <input type="checkbox" name="meatChoice" value="sausage">Sausage<br>
+            <input type="checkbox" name="meatChoice" value="canadian-bacon">Canadian Bacon<br>
+            <input type="checkbox" name="meatChoice" value="Prosciutto">prosciutto<br>
 
-       <h3>Vegetables ($2 each) </h3>
-        <input type="checkbox" name="vegetable" value="olives">Olives<br>
-        <input type="checkbox" name="vegetable" value="onions">Onions<br>
-        <input type="checkbox" name="vegetable" value="mushrooms">Mushrooms<br>
-        <input type="checkbox" name="vegetable" value="basil">Basil<br>
-        <input type="checkbox" name="vegetable" value="tomatoes">Tomatoes<br>
+          <h3>Vegetables ($2 each) </h3>
+            <input type="checkbox" name="vegetable" value="olives">Olives<br>
+            <input type="checkbox" name="vegetable" value="onions">Onions<br>
+            <input type="checkbox" name="vegetable" value="mushrooms">Mushrooms<br>
+            <input type="checkbox" name="vegetable" value="basil">Basil<br>
+            <input type="checkbox" name="vegetable" value="tomatoes">Tomatoes<br>
 
-       <h3>Accents ($2 each)</h3>
-       <input type="checkbox" name="accent" value="anchovies">Anchovies<br>
-       <input type="checkbox" name="accent" value="clams">Clams<br>
-       <input type="checkbox" name="accent" value="garlic">Garlic<br>
-       <input type="checkbox" name="accent" value="pepperoncini">Pepperoncini<br>
-       <input type="checkbox" name="accent" value="bacon">Bacon<br>
-
-   <button type="submit" name="button">Find your Pizza cost</button>
-   </form>
-   <h4 id="dollars">Your pizza will be      dollars.</h4>
-
-
-
-
-
-
+          <h3>Accents ($2 each)</h3>
+            <input type="checkbox" name="accent" value="anchovies">Anchovies<br>
+            <input type="checkbox" name="accent" value="clams">Clams<br>
+            <input type="checkbox" name="accent" value="garlic">Garlic<br>
+            <input type="checkbox" name="accent" value="pepperoncini">Pepperoncini<br>
+            <input type="checkbox" name="accent" value="bacon">Bacon<br>
+          <br><br>
+          <button type="submit" name="button">Submit</button>
+        </form>
+      </div>
+      <h4 id="dollars">Your pizza will be      dollars.</h4>
   </body>
 </html>
