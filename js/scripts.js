@@ -5,14 +5,15 @@ function Pizza(size, meat, veg, accent){
   this.vegChoice = veg;
   this.accentChoice = accent;
   this.pizzaCost = 7;
- }
+};
 
 
 
-Pizza.prototype.price = function(size) {
-  if (size === "large") {
-       console.log(size);
-    return this.pizzaCost * 2
+Pizza.prototype.price = function(size){
+  if (this.pizzaSize === "large") {
+    console.log(this.pizzaSize);
+
+    return this.pizzaCost * 2;
   }
     else if (size === "medium") {
       return this.pizzaCost * 1.5;
@@ -21,8 +22,10 @@ Pizza.prototype.price = function(size) {
         return this.pizzaCost * 1;
       }
 
-  for (i=0; i<meatChoice.length; i++) {
+  for (i=0; i<this.meatChoice.length; i++) {
          this.pizzaCost + 2;
+         console.log(this.meatchoice);
+         console.log(meat);
   }
   for (i=0; i<vegChoice.length; i++) {
          this.pizzaCost + 2;
@@ -38,31 +41,31 @@ Pizza.prototype.price = function(size) {
 
    $("#form1").submit(function(event){
      event.preventDefault();
-     var size = $("input:radio[name=size]:checked").val();
-     console.log(size);
 
+     var size = $("input:radio[name=size]:checked").val();
+
+
+     var meat = [];
      $("input:checkbox[name=meat]:checked").each(function(){
        var inputMeat = $(this).val();
-       var meat = [];
-       meat.push(meatChoice);
-       console.log(meat);
+       meat.push(inputMeat);
+
      });
 
+     var veg = [];
      $("input:checkbox[name=veg]:checked").each(function(){
        var inputVeg = $(this).val();
-       var veg = [];
-       vegchoice.push(veg);
+       veg.push(inputVeg);
 
      });
-
+     var accent = [];
      $("input:checkbox[name=accent]:checked").each(function(){
        var inputAccent = $(this).val();
-       var accent = [];
-       accentchoice.push(accent);
+       accent.push(inputAccent);
      });
 
      var pizzaChoice = new Pizza(size, meat, veg, accent);
-     var pizzaPrice = user.pizza.price;
+     //var pizzaPrice = user.pizza.price;
      //$("#price").text("Your Pizza will be " + priceResult + " dollars");
 
    });
