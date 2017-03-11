@@ -5,18 +5,16 @@
 #### By _Tom Yoder_
 
 ## Description
-  _Pizza Mastodon, a solo assignment, is an attempt to create a webpage for a business that takes online orders for pizza and delivers to one's home. Clients must be able to select various sizes, and toppings of Pizza and see what the pizza will cost based on their choices.
+  _Pizza Mastodon, a solo assignment, is an attempt to create a webpage for a business that takes online orders for pizza and delivers to one's home. Clients select from various sizes and toppings of Pizza and see what the pizza will cost based on their choices.
   SPECS
 
-  1. The client sees a webpage with options for creating and ordering a pizza.
+  1. The website presents the client with options for toppings and size of Pizza.
 
-  2. The client is informed of size options and selects for size.
+  2. The client's selection of pizza size is used to set a base price.
 
-  3. The client is informed of topping options and selects for toppings.
+  3. The base price is augmented by topping selections.
 
-  4.The client is presented with the cost of their order.
-
-  5. The client can finalize their order.
+  4.The total price is returned to the client.
 
   github:
   _
